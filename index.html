@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Private Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <section class="header">
+      <div class="logo-container">
+        <img src="img/logoBlack.png" alt="Logo" class="logo" />
+      </div>
+      <p class="fade-text">Não tem ideias para suas senhas? Nosso sistema irá ajudá-lo a criar suas senhas de forma rapida e facil!</p>
+    </section>
+  </header>
+    <div class="mae">
+  <section class="form">
+    <form>
+      <div class="inclusao">
+        <div class="form-check mb-2">
+          <input class="form-check-input-dark" type="checkbox" id="usarLetras" checked>
+          <label class="form-check-label" for="usarLetras">Incluir Letras <br> </label>
+          <p>(abc...)</p>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input-dark" type="checkbox" id="usarNumeros" checked>
+          <label class="form-check-label" for="usarNumeros">Incluir Números <br></label>
+          <p>(123...)</p>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input-dark" type="checkbox" id="usarEspeciais">
+          <label class="form-check-label" for="usarEspeciais">Incluir Caracteres Especiais <br></label>
+          <p>(@!#...)</p>
+        </div>
+      </div>
+
+      <div class="quant">
+        <div class="form-check mb-3">
+          <input class="form-check-input-dark" type="checkbox" id="personalizarQtd">
+          <label class="form-check-label fw-bold" for="personalizarQtd">Personalizar quantidade de cada tipo</label>
+        </div>
+      </div>
+
+      <div id="qtdPersonalizada" class="hidden mb-3">
+        <div class="row">
+          <div class="col-md-4">
+            <label for="qtdLetras" class="form-label">Qtd. Letras</label>
+            <input type="number" class="form-control" id="qtdLetras" min="0" value="4">
+          </div>
+          <div class="col-md-4">
+            <label for="qtdNumeros" class="form-label">Qtd. Números</label>
+            <input type="number" class="form-control" id="qtdNumeros" min="0" value="4">
+          </div>
+          <div class="col-md-4">
+            <label for="qtdEspeciais" class="form-label">Qtd. Especiais</label>
+            <input type="number" class="form-control" id="qtdEspeciais" min="0" value="4">
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="sequencia" class="form-label">Sequência personalizada (opcional)</label>
+        <input type="text" class="form-control" id="sequencia" placeholder="Ex: Minha@Senha">
+      </div>
+
+      <div class="mb-3">
+        <label for="tamanhoTotal" class="form-label">Tamanho total: <span id="tamanhoLabel" class="fw-bold">12</span></label>
+        <input type="range" class="form-range" id="tamanhoTotal" min="4" max="50" value="12">
+      </div>
+
+      <div class="resultado mt-4 d-flex">
+        <button type="button" class="btn btn-dark" id="gerar">Gerar Senha</button>
+        <input type="text" class="form-control me-2" id="senhaGerada" readonly>
+        <button class="btn btn-outline-secondary" id="copiar">Copiar</button>
+      </div>
+    </form>
+    <div class="footer">
+    <img src="" alt="" class="criador">
+    <div class="texto-footer">
+        <p>Desenvolvido por <span>João Gabriel.</span></p>
+        <p>© 2024 Copywriting.</p>
+        <p>Todos os direitos reservados.</p>
+        </div>
+    </div>
+  </section>
+
+</div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
